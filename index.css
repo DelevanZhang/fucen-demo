@@ -1,0 +1,45 @@
+.float {
+    border: 1px solid red;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    white-space: nowrap;
+    margin-left: 20px;
+    padding: 10px;
+    transition: all 0.5s;
+    display: none;
+}
+
+.float::before {
+    border: 10px solid transparent;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-right-color: red;
+    margin-top: 4px;
+}
+
+.float::after {
+    border: 10px solid transparent;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 100%;
+    border-right-color: white;
+    margin-top: 4px;
+    margin-right: -1px;
+}
+
+.wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.float.show {
+    display: block;
+}
+
+.float.hide {
+    display: none;
+}
